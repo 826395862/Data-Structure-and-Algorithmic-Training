@@ -1,6 +1,6 @@
 #include<gtest/gtest.h>
 
-int main(int argc, char** argv)
+int mainexample2_3(int argc, char** argv)
 {
 	testing::GTEST_FLAG(filter) = "TestMergeLNode.*";
     testing::InitGoogleTest(&argc, argv);

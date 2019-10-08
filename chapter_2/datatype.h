@@ -1,6 +1,6 @@
 #pragma once
 
-#define MAX_SIZE 100
+#define MAX_SIZE 10000
 
 typedef struct
 {

@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 
 class TestMergeLNode : public testing::Test {
-public:
+protected:
 	static Sqlist sqlist_a;
 	static Sqlist sqlist_b;
 	static LNode *A;
