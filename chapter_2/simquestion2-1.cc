@@ -16,6 +16,21 @@ Sqlist MergeSqlist(const Sqlist &sqlist_left, const Sqlist &sqlist_right) {
 	return sqlist_tank;
 }
 
+int MergeArray(int *int_array_left, int length_left, int *int_array_right, int length_right, int *int_array_c, int length_c) {
+	if(length_c != length_left + length_right) {
+		return -1;
+	}
+
+	for(int i = 0; i < length_left; i++) {
+		int_array_c[i] = int_array_left[i];
+	}
+
+	for(int j = 0; j < length_right; j++) {
+		int_array_c[j + length_left] = int_array_right[j];
+	}
+	return 0;
+}
+
 void SortMergeSqlist(int m, int n, Sqlist &sqlist) {
 	Sqlist sqlist_tank = {{}, sqlist.length};
 	int sqlist_tank_index = 0;
