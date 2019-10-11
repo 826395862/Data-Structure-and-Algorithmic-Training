@@ -7,6 +7,7 @@
 
 #include "datatype.h"
 #include "malloc.h"
+#include <iostream>
 
 LNode *CreatLinkedList(Sqlist &sqlist) {
 	int lenLNode = sizeof(LNode);
@@ -34,4 +35,23 @@ LNode *CreatLinkedList(Sqlist &sqlist) {
     return head;
 }
 
+int DeleteLinkedlist(LNode *&lnode) {
+	LNode *temp;
+	while(lnode != NULL) {
+		temp = lnode;
+		lnode = lnode->next;
+		delete(temp);
+	}
+
+	return 0;
+}
+
+void PrintLinkedlist(LNode *lnode) {
+	lnode = lnode->next;
+	while(lnode != NULL) {
+		std::cout << lnode->data << " ";
+		lnode = lnode->next;
+	}
+	std::cout << std::endl;
+}
 

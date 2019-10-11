@@ -15,3 +15,7 @@ typedef struct LNode
 }LNode;
 
 LNode *CreatLinkedList(Sqlist &sqlist);
+
+int DeleteLinkedlist(LNode *&lnode);
+
+void PrintLinkedlist(LNode *lnode);

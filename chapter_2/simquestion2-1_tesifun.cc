@@ -21,31 +21,31 @@ int *TestMergeSqlist::int_array_a = new int[10];
 int *TestMergeSqlist::int_array_b = new int[6];
 int *TestMergeSqlist::int_array_c = new int[16];
 
-int main() {
-	PrintSqlist(TestMergeSqlist::sqlist_a);
-	PrintSqlist(TestMergeSqlist::sqlist_b);
-	SortSqlist(TestMergeSqlist::sqlist_a);
-    SortSqlist(TestMergeSqlist::sqlist_b);
-    TestMergeSqlist::sqlist_c = MergeSqlist(TestMergeSqlist::sqlist_a, TestMergeSqlist::sqlist_b);
-    PrintSqlist(TestMergeSqlist::sqlist_a);
-    PrintSqlist(TestMergeSqlist::sqlist_b);
-    PrintSqlist(TestMergeSqlist::sqlist_c);
-    SortMergeSqlist(10, 6, TestMergeSqlist::sqlist_c);
-    PrintSqlist(TestMergeSqlist::sqlist_c);
-
-    cout << endl;
-    CreatRandomArray(0, 20, 10, TestMergeSqlist::int_array_a);
-    CreatRandomArray(0, 20, 6, TestMergeSqlist::int_array_b);
-    SortArray(TestMergeSqlist::int_array_a, 10);
-    SortArray(TestMergeSqlist::int_array_b, 6);
-    PrintArray(TestMergeSqlist::int_array_a, 10);
-    PrintArray(TestMergeSqlist::int_array_b, 6);
-    MergeArray(TestMergeSqlist::int_array_a, 10, TestMergeSqlist::int_array_b, 6, TestMergeSqlist::int_array_c, 16);
-    PrintArray(TestMergeSqlist::int_array_a, 10);
-    PrintArray(TestMergeSqlist::int_array_b, 6);
-    PrintArray(TestMergeSqlist::int_array_c, 16);
-
-    delete []TestMergeSqlist::int_array_a;
-    delete []TestMergeSqlist::int_array_b;
-    delete []TestMergeSqlist::int_array_c;
-}
+//int main() {
+//	PrintSqlist(TestMergeSqlist::sqlist_a);
+//	PrintSqlist(TestMergeSqlist::sqlist_b);
+//	SortSqlist(TestMergeSqlist::sqlist_a);
+//    SortSqlist(TestMergeSqlist::sqlist_b);
+//    TestMergeSqlist::sqlist_c = MergeSqlist(TestMergeSqlist::sqlist_a, TestMergeSqlist::sqlist_b);
+//    PrintSqlist(TestMergeSqlist::sqlist_a);
+//    PrintSqlist(TestMergeSqlist::sqlist_b);
+//    PrintSqlist(TestMergeSqlist::sqlist_c);
+//    SortMergeSqlist(10, 6, TestMergeSqlist::sqlist_c);
+//    PrintSqlist(TestMergeSqlist::sqlist_c);
+//
+//    cout << endl;
+//    CreatRandomArray(0, 20, 10, TestMergeSqlist::int_array_a);
+//    CreatRandomArray(0, 20, 6, TestMergeSqlist::int_array_b);
+//    SortArray(TestMergeSqlist::int_array_a, 10);
+//    SortArray(TestMergeSqlist::int_array_b, 6);
+//    PrintArray(TestMergeSqlist::int_array_a, 10);
+//    PrintArray(TestMergeSqlist::int_array_b, 6);
+//    MergeArray(TestMergeSqlist::int_array_a, 10, TestMergeSqlist::int_array_b, 6, TestMergeSqlist::int_array_c, 16);
+//    PrintArray(TestMergeSqlist::int_array_a, 10);
+//    PrintArray(TestMergeSqlist::int_array_b, 6);
+//    PrintArray(TestMergeSqlist::int_array_c, 16);
+//
+//    delete []TestMergeSqlist::int_array_a;
+//    delete []TestMergeSqlist::int_array_b;
+//    delete []TestMergeSqlist::int_array_c;
+//}
