@@ -20,7 +20,7 @@ LNode *SubLinkedlistTest::sub_Linkedlist;
 TEST_F(SubLinkedlistTest, test) {
 	PrintLinkedlist(SubLinkedlistTest::source_Linkedlist);
 	PrintLinkedlist(SubLinkedlistTest::sub_Linkedlist);
-	SubLinkedlist(SubLinkedlistTest::source_Linkedlist, SubLinkedlistTest::sub_Linkedlist);
+	SubLinkedlistAlgorithm2(SubLinkedlistTest::source_Linkedlist, SubLinkedlistTest::sub_Linkedlist);
 	PrintLinkedlist(SubLinkedlistTest::source_Linkedlist);
 	DeleteLinkedlist(SubLinkedlistTest::source_Linkedlist);
 	DeleteLinkedlist(SubLinkedlistTest::sub_Linkedlist);
