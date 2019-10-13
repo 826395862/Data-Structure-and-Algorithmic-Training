@@ -13,7 +13,7 @@ LNode *CreatLinkedList(Sqlist &sqlist) {
 	int lenLNode = sizeof(LNode);
 	LNode *head, *p1, *p2;
     head = (LNode*)malloc(lenLNode);
-    head->next = NULL;
+    head->next = nullptr;
 
     if(sqlist.length <= 0)
 		return head;
@@ -31,7 +31,7 @@ LNode *CreatLinkedList(Sqlist &sqlist) {
     	}
     }
 
-    p1->next = NULL;
+    p1->next = nullptr;
     return head;
 }
 
@@ -55,3 +55,10 @@ void PrintLinkedlist(LNode *lnode) {
 	std::cout << std::endl;
 }
 
+int ElemInLinkedlist(LNode *linkedlist, int pos) {
+	LNode *p = linkedlist;
+	for(int i = 0; i <= pos; i++) {
+		p = p->next;
+	}
+	return p->data;
+}

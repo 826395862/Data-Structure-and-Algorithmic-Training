@@ -19,3 +19,5 @@ LNode *CreatLinkedList(Sqlist &sqlist);
 int DeleteLinkedlist(LNode *&lnode);
 
 void PrintLinkedlist(LNode *lnode);
+
+int ElemInLinkedlist(LNode *, int);
