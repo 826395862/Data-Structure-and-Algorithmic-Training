@@ -62,3 +62,17 @@ int ElemInLinkedlist(LNode *linkedlist, int pos) {
 	}
 	return p->data;
 }
+
+int ReverseSqlistPos_mToPos_n(Sqlist &sqlist, int m, int n) {
+	int temp;
+	if(m > n || m < 0 || n > sqlist.length - 1) {
+		return -1;
+	}
+
+	for(int i = m; i < (n + m + 1) / 2; i++) {
+		temp = sqlist.data[i];
+		sqlist.data[i] = sqlist.data[m + n -i];
+		sqlist.data[m + n - i] = temp;
+	}
+	return 0;
+}

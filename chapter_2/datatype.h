@@ -8,6 +8,12 @@ typedef struct
 	int length = 0;
 }Sqlist;
 
+typedef struct
+{
+	int data[2][MAX_SIZE];
+	int length = 0;
+}Sqlist2Mul;
+
 typedef struct LNode
 {
 	int data;
@@ -21,3 +27,5 @@ int DeleteLinkedlist(LNode *&lnode);
 void PrintLinkedlist(LNode *lnode);
 
 int ElemInLinkedlist(LNode *, int);
+
+int ReverseSqlistPos_mToPos_n(Sqlist &,int ,int);
