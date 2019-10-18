@@ -45,3 +45,7 @@ void PrintLinkedlist(LNode *lnode);
 int ElemInLinkedlist(LNode *, int);
 
 int ReverseSqlistPos_mToPos_n(Sqlist &,int ,int);
+
+int push(SqStack &, int);
+
+int pop(SqStack &,int &);
