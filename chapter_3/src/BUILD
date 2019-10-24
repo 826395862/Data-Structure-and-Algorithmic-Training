@@ -22,12 +22,27 @@ cc_library(
     deps = ["datatype"],
 )
 
+# https://docs.bazel.build/versions/master/be/c-cpp.html#cc_library
+cc_library(
+    name = "simqu3_1",
+    srcs = ["simqu3_1.cc"],
+    hdrs = ["simqu3_1.h"],
+    deps = ["datatype"],
+)
+
 # https://docs.bazel.build/versions/master/be/c-cpp.html#cc_binary
 cc_test(
-    name = "example3_3_test",
-    srcs = ["example3_3testfun.cc"],
+    name = "example3_3test",
+    srcs = ["example3_3test.cc"],
     copts = ["-Iexternal/gtest/include"],
     deps = ["example3_3","datatype","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "simqu3_1test",
+    srcs = ["simqu3_1test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["simqu3_1","//:gtest","//:gtest_main"],
 )
 
 # https://docs.bazel.build/versions/master/be/c-cpp.html#cc_binary

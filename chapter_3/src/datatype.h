@@ -26,6 +26,13 @@ typedef struct
 	int top;
 }SqStack;
 
+typedef struct 
+{
+	int data[MAX_SIZE];
+	int top[2];
+}ShareStack;
+
+
 typedef struct SqQueue
 {
 	int data[MAX_SIZE];
