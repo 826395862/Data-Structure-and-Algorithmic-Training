@@ -53,6 +53,10 @@ int ElemInLinkedlist(LNode *, int);
 
 int ReverseSqlistPos_mToPos_n(Sqlist &,int ,int);
 
+void InitSqstack(SqStack &);
+
 int push(SqStack &, int);
 
 int pop(SqStack &,int &);
+
+int IsEmptySqstack(SqStack &);

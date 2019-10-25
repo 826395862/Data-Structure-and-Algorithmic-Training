@@ -77,6 +77,10 @@ int ReverseSqlistPos_mToPos_n(Sqlist &sqlist, int m, int n) {
 	return 0;
 }
 
+void InitSqstack(SqStack &sqstack) {
+	sqstack.top = -1;
+}
+
 int push(SqStack &sqstack, int push_elem) {
 	if(sqstack.top == MAX_SIZE - 1 || sqstack.top < -1) {
 		return 0;
@@ -87,7 +91,7 @@ int push(SqStack &sqstack, int push_elem) {
 }
 
 int pop(SqStack &sqstack,int &pop_elem) {
-	if(sqstack.top <= -1 || sqstack.top == MAX_SIZE - 1) {
+	if(sqstack.top <= -1 || sqstack.top > MAX_SIZE - 1) {
 		return 0;
 	}
 	pop_elem = sqstack.data[sqstack.top];
@@ -95,3 +99,9 @@ int pop(SqStack &sqstack,int &pop_elem) {
 	return 1;
 }
 
+int IsEmptySqstack(SqStack &sqstack) {
+	if(-1 == sqstack.top) {
+		return 1;
+	} else
+	return 0;
+}

@@ -30,6 +30,13 @@ cc_library(
     deps = ["datatype"],
 )
 
+cc_library(
+    name = "simqu3_2",
+    srcs = ["simqu3_2.cc"],
+    hdrs = ["simqu3_2.h"],
+    deps = ["datatype"],
+)
+
 # https://docs.bazel.build/versions/master/be/c-cpp.html#cc_binary
 cc_test(
     name = "example3_3test",
@@ -43,6 +50,13 @@ cc_test(
     srcs = ["simqu3_1test.cc"],
     copts = ["-Iexternal/gtest/include"],
     deps = ["simqu3_1","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "simqu3_2test",
+    srcs = ["simqu3_2test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["simqu3_2","//:gtest","//:gtest_main"],
 )
 
 # https://docs.bazel.build/versions/master/be/c-cpp.html#cc_binary
