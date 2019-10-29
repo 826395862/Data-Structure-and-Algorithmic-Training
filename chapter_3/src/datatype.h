@@ -20,6 +20,12 @@ typedef struct LNode
 	LNode *next;
 }LNode;
 
+typedef struct QNode
+{
+	int data;
+	QNode *next;
+}QNode;
+
 typedef struct 
 {
 	int data[MAX_SIZE];
@@ -40,6 +46,11 @@ typedef struct SqQueue
 	int rear;
 	
 }SqQueue;
+
+typedef struct {
+	LNode *front;
+	LNode *rear;
+}LiQueue;
 
 
 
