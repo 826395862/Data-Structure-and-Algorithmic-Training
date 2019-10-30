@@ -105,3 +105,21 @@ int IsEmptySqstack(SqStack &sqstack) {
 	} else
 	return 0;
 }
+
+void InitSqQueue(SqQueue &sq_queue) {
+	sq_queue.front = -1;
+	sq_queue.rear = -1;
+}
+
+void InitCycleQueue(CycleQueue &cycle_queue) {
+	cycle_queue.front = -1;
+	cycle_queue.rear = -1;
+}
+
+int IsEmptyCycleQueue(CycleQueue cycle_queue) {
+	if(cycle_queue.front == cycle_queue.rear) {
+		return 1;
+	} else {
+		return 0;
+	}
+}

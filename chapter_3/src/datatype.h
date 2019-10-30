@@ -1,6 +1,6 @@
 #pragma once
 
-#define MAX_SIZE 10000
+#define MAX_SIZE 100
 
 typedef struct
 {
@@ -38,7 +38,6 @@ typedef struct
 	int top[2];
 }ShareStack;
 
-
 typedef struct SqQueue
 {
 	int data[MAX_SIZE];
@@ -46,6 +45,14 @@ typedef struct SqQueue
 	int rear;
 	
 }SqQueue;
+
+typedef struct CycleQueue
+{
+	int data[MAX_SIZE];
+	int front;
+	int rear;
+	
+}CycleQueue;
 
 typedef struct {
 	LNode *front;
@@ -71,3 +78,9 @@ int push(SqStack &, int);
 int pop(SqStack &,int &);
 
 int IsEmptySqstack(SqStack &);
+
+void InitSqQueue(SqQueue &);
+
+void InitCycleQueue(CycleQueue &);
+
+int IsEmptyCycleQueue(CycleQueue );
