@@ -123,3 +123,9 @@ int IsEmptyCycleQueue(CycleQueue cycle_queue) {
 		return 0;
 	}
 }
+
+void InitCycleQueueWithTag(CycleQueueWithTag &cycle_queue_with_tag) {
+	cycle_queue_with_tag.front = -1;
+	cycle_queue_with_tag.rear = -1;
+	cycle_queue_with_tag.tag = 0;
+}

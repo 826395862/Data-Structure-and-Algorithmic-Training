@@ -54,6 +54,15 @@ typedef struct CycleQueue
 	
 }CycleQueue;
 
+typedef struct CycleQueueWithTag
+{
+	int data[MAX_SIZE];
+	int front;
+	int rear;
+	int tag;
+	
+}CycleQueueWithTag;
+
 typedef struct {
 	LNode *front;
 	LNode *rear;
@@ -84,3 +93,5 @@ void InitSqQueue(SqQueue &);
 void InitCycleQueue(CycleQueue &);
 
 int IsEmptyCycleQueue(CycleQueue );
+
+void InitCycleQueueWithTag(CycleQueueWithTag &);
