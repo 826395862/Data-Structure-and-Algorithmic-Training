@@ -61,6 +61,20 @@ cc_library(
     deps = ["datatype"],
 )
 
+cc_library(
+    name = "basic3_9",
+    srcs = ["basic3_9.cc"],
+    hdrs = ["basic3_9.h"],
+    deps = [],
+)
+
+cc_library(
+    name = "basic3_10",
+    srcs = ["basic3_10.cc"],
+    hdrs = ["basic3_10.h"],
+    deps = ["datatype"],
+)
+
 
 #Test
 cc_test(
@@ -110,6 +124,20 @@ cc_test(
     srcs = ["basic3_8test.cc"],
     copts = ["-Iexternal/gtest/include"],
     deps = ["basic3_8","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "basic3_9test",
+    srcs = ["basic3_9test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["basic3_9","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "basic3_10test",
+    srcs = ["basic3_10test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["basic3_10","//:gtest","//:gtest_main"],
 )
 
 
