@@ -75,6 +75,13 @@ cc_library(
     deps = ["datatype"],
 )
 
+cc_library(
+    name = "think3_1",
+    srcs = ["think3_1.cc"],
+    hdrs = ["think3_1.h"],
+    deps = [],
+)
+
 
 #Test
 cc_test(
@@ -138,6 +145,13 @@ cc_test(
     srcs = ["basic3_10test.cc"],
     copts = ["-Iexternal/gtest/include"],
     deps = ["basic3_10","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "think3_1test",
+    srcs = ["think3_1test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["think3_1","//:gtest","//:gtest_main"],
 )
 
 
