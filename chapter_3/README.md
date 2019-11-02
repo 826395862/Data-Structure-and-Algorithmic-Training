@@ -1,4 +1,4 @@
-[**#基础题3-6**](https://github.com/826395862/Data-Structure-and-Algorithmic-Training/tree/master/chapter_3/src)  
+#[**基础题3-6**](https://github.com/826395862/Data-Structure-and-Algorithmic-Training/tree/master/chapter_3/src)  
 功能：以带头节点的循环链表表示队列，并且只设一个尾指针，无头指针  
 接口：入队出队算法  
 [**#基础题3-7**](https://github.com/826395862/Data-Structure-and-Algorithmic-Training/tree/master/chapter_3/src)  
