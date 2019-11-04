@@ -82,6 +82,13 @@ cc_library(
     deps = [],
 )
 
+cc_library(
+    name = "think3_2",
+    srcs = ["think3_2.cc"],
+    hdrs = ["think3_2.h"],
+    deps = [],
+)
+
 
 #Test
 cc_test(
@@ -152,6 +159,13 @@ cc_test(
     srcs = ["think3_1test.cc"],
     copts = ["-Iexternal/gtest/include"],
     deps = ["think3_1","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "think3_2test",
+    srcs = ["think3_2test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["think3_2","//:gtest","//:gtest_main"],
 )
 
 
