@@ -84,6 +84,8 @@ typedef struct BTNodeChar
 
 int InsertBTNodeChar(BTNodeChar *, int , char, char);
 
+int InsertBTNode(BTNode *, int , int, int);
+
 LNode *CreatLinkedList(Sqlist &sqlist);
 
 int DeleteLinkedlist(LNode *&lnode);

@@ -149,3 +149,23 @@ int InsertBTNodeChar(BTNodeChar *bt_char, int insert_style, char lchild_data = '
 		return -1;
 	}
 }
+
+int InsertBTNode(BTNode *bt, int insert_style, int lchild_data = 0, int rchild_data = 0) {
+	if(0 == insert_style) {
+		bt->lchild = new BTNode{0};
+		bt->rchild = new BTNode{0};
+		bt->lchild->data = lchild_data;
+		bt->rchild->data = rchild_data;
+		return 0;
+	} else if(-1 == insert_style) {
+		bt->lchild = new BTNode{0};
+		bt->lchild->data = lchild_data;
+		return 0;
+	} else if(1 == insert_style) {
+		bt->rchild = new BTNode{0};
+		bt->rchild->data = rchild_data;
+		return 0;
+	} else { 
+		return -1;
+	}
+}

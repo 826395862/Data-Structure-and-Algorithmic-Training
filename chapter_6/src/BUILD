@@ -12,10 +12,39 @@ cc_library(
     deps = ["datatype"],
 )
 
+cc_library(
+    name = "example6_2",
+    srcs = ["example6_2.cc"],
+    hdrs = ["example6_2.h"],
+    deps = ["datatype"],
+)
+
+cc_library(
+    name = "example6_3",
+    srcs = ["example6_3.cc"],
+    hdrs = ["example6_3.h"],
+    deps = ["datatype"],
+)
+
+
 #Test
 cc_test(
     name = "example6_1test",
     srcs = ["example6_1test.cc"],
     copts = ["-Iexternal/gtest/include"],
     deps = ["example6_1","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "example6_2test",
+    srcs = ["example6_2test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["example6_2","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "example6_3test",
+    srcs = ["example6_3test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["example6_3","//:gtest","//:gtest_main"],
 )
