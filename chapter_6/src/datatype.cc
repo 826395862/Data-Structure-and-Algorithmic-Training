@@ -169,3 +169,25 @@ int InsertBTNode(BTNode *bt, int insert_style, int lchild_data = 0, int rchild_d
 		return -1;
 	}
 }
+
+void InitBTNodeStack(BTNodeStack &btnode_stack) {
+	btnode_stack.top = -1;
+}
+
+int PushBTNodeStack(BTNodeStack &btnode_stack, BTNode *btnode) {
+	if(btnode_stack.top == MAX_SIZE - 1 || btnode_stack.top < -1) {
+		return -1;
+	}
+	++btnode_stack.top;
+	btnode_stack.data[btnode_stack.top] = btnode;
+	return 0;
+}
+
+int PopBTNodeStack(BTNodeStack &btnode_stack, BTNode *&btnode) {
+	if(btnode_stack.top <= -1 || btnode_stack.top > MAX_SIZE - 1) {
+		return -1;
+	}
+	btnode = btnode_stack.data[btnode_stack.top];
+	btnode_stack.top--;
+	return 0;
+}

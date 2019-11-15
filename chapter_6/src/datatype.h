@@ -82,6 +82,13 @@ typedef struct BTNodeChar
 	BTNodeChar *rchild;
 }BTNodeChar;
 
+typedef struct BTNodeStack
+{
+	BTNode *data[MAX_SIZE];
+	int top;
+}BTNodeStack;
+
+
 int InsertBTNodeChar(BTNodeChar *, int , char, char);
 
 int InsertBTNode(BTNode *, int , int, int);
@@ -111,3 +118,9 @@ void InitCycleQueue(CycleQueue &);
 int IsEmptyCycleQueue(CycleQueue );
 
 void InitCycleQueueWithTag(CycleQueueWithTag &);
+
+void InitBTNodeStack(BTNodeStack &);
+
+int PushBTNodeStack(BTNodeStack &, BTNode*);
+
+int PopBTNodeStack(BTNodeStack &, BTNode *&);
