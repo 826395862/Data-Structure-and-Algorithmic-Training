@@ -47,6 +47,19 @@ cc_library(
     deps = ["datatype"],
 )
 
+cc_library(
+    name = "basic6_1",
+    srcs = ["basic6_1.cc"],
+    hdrs = ["basic6_1.h"],
+    deps = ["datatype"],
+)
+
+cc_library(
+    name = "basic6_2",
+    srcs = ["basic6_2.cc"],
+    hdrs = ["basic6_2.h"],
+    deps = ["datatype"],
+)
 
 #Test
 cc_test(
@@ -91,3 +104,16 @@ cc_test(
     deps = ["real6_1","//:gtest","//:gtest_main"],
 )
 
+cc_test(
+    name = "basic6_1test",
+    srcs = ["basic6_1test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["basic6_1","//:gtest","//:gtest_main"],
+)
+
+cc_test(
+    name = "basic6_2test",
+    srcs = ["basic6_2test.cc"],
+    copts = ["-Iexternal/gtest/include"],
+    deps = ["basic6_2","//:gtest","//:gtest_main"],
+)
