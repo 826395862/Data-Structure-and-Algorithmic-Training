@@ -75,6 +75,14 @@ typedef struct BTNode
 	BTNode *rchild;
 }BTNode;
 
+typedef struct BTNodeWithParent
+{
+	int data;
+	BTNodeWithParent *lchild;
+	BTNodeWithParent *rchild;
+	BTNodeWithParent *parent;
+}BTNodeWithParent;
+
 typedef struct BTNodeChar
 {
 	char data;
@@ -92,6 +100,8 @@ typedef struct BTNodeStack
 int InsertBTNodeChar(BTNodeChar *, int , char, char);
 
 int InsertBTNode(BTNode *, int , int, int);
+
+int InsertBTNodeWithParent(BTNodeWithParent *, int , int, int);
 
 LNode *CreatLinkedList(Sqlist &sqlist);
 

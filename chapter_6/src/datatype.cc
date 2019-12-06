@@ -170,6 +170,26 @@ int InsertBTNode(BTNode *bt, int insert_style, int lchild_data = 0, int rchild_d
 	}
 }
 
+int InsertBTNodeWithParent(BTNodeWithParent *bt, int insert_style, int lchild_data = 0, int rchild_data = 0) {
+	if(0 == insert_style) {
+		bt->lchild = new BTNodeWithParent{0};
+		bt->rchild = new BTNodeWithParent{0};
+		bt->lchild->data = lchild_data;
+		bt->rchild->data = rchild_data;
+		return 0;
+	} else if(-1 == insert_style) {
+		bt->lchild = new BTNodeWithParent{0};
+		bt->lchild->data = lchild_data;
+		return 0;
+	} else if(1 == insert_style) {
+		bt->rchild = new BTNodeWithParent{0};
+		bt->rchild->data = rchild_data;
+		return 0;
+	} else { 
+		return -1;
+	}
+}
+
 void InitBTNodeStack(BTNodeStack &btnode_stack) {
 	btnode_stack.top = -1;
 }
